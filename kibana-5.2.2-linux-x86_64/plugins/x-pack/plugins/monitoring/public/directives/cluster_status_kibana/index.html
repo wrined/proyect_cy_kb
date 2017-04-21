@@ -1,0 +1,29 @@
+<div class="monitoring-element monitoring-cluster-status">
+  <div ng-if="cluster" class="stats">
+    <div>
+      <span class="status status-{{ getStatusClass() }}">
+        <span class="{{ getStatusIconClass() }}" title="{{ getStatusText() }}"></span>
+      </span>
+    </div>
+    <div>Instances:
+      <strong data-test-subj="count">{{ pageData.clusterStatus.count }}</strong>
+    </div>
+    <div>Requests:
+      <strong data-test-subj="requests_total">{{ pageData.clusterStatus.requests_total }}</strong>
+    </div>
+    <div>Connections:
+      <strong data-test-subj="concurrent_connections">{{ pageData.clusterStatus.concurrent_connections|formatNumber:'int_commas' }}</strong>
+    </div>
+    <div>Max. Response Time:
+      <strong data-test-subj="response_time_max">{{ pageData.clusterStatus.response_time_max }} ms</strong>
+    </div>
+    <div>Memory:
+      <strong data-test-subj="memory_usage">{{ pageData.clusterStatus.memory_size|formatNumber:'bytes' }} / {{ pageData.clusterStatus.memory_limit|formatNumber:'bytes' }}</strong>
+    </div>
+  </div>
+  <div ng-if="!cluster" class="stats">
+    <div class="loading">
+      <span class="fa fa-spinner fa-pulse"></span> Loading Data...
+    </div>
+  </div>
+</div>

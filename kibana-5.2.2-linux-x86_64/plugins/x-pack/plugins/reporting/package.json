@@ -1,0 +1,12 @@
+{
+  "name": "reporting",
+  "version": "5.2.1",
+  "description": "An awesome Kibana reporting plugin",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "package": "gulp package",
+    "test": "gulp test"
+  }
+}

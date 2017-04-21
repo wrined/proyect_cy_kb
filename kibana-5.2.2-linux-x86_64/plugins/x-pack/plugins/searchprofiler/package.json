@@ -1,0 +1,5 @@
+{
+  "name": "searchprofiler",
+  "version": "5.2.1",
+  "description": "Query and Aggregation Profiler for Elasticsearch"
+}

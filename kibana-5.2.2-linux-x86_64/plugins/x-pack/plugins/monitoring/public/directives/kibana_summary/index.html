@@ -1,0 +1,18 @@
+<div class="monitoring-element monitoring-kibana-status">
+  <div class="stats">
+    <div>
+      <span class="status status-{{ getSummaryStatus() }}">
+        <span class="{{ getStatusIconClass() }}" title="{{ getSummaryStatusText() }}"></span>
+      </span>
+    </div>
+    <div>
+      <strong data-test-subj="transportAddress">{{ kibana.transport_address }}</strong>
+    </div>
+    <div>OS Free Memory:
+      <strong data-test-subj="osFreeMemory">{{ kibana.os_memory_free|formatNumber:'0.0 b' }}</strong>
+    </div>
+    <div>Version:
+      <strong data-test-subj="version">{{ kibana.version }}</strong>
+    </div>
+  </div>
+</div>

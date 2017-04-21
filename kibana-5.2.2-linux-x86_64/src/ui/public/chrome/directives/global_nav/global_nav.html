@@ -1,0 +1,69 @@
+
+<nav
+  class="global-nav"
+  ng-class="{'is-global-nav-open': isGlobalNavOpen}"
+  ng-show="isVisible"
+>
+
+  <!-- Logo -->
+  <div class="global-nav__logo">
+    <li
+      ng-if="!logoBrand && !smallLogoBrand"
+      aria-label="{{ appTitle }} Logo"
+      class="logo kibana"
+    ></li>
+
+    <li
+      ng-if="logoBrand"
+      ng-style="{ 'background': logoBrand }"
+      aria-label="{{ appTitle }} Logo"
+      class="logo hidden-sm"
+    ></li>
+
+    <li
+      ng-if="smallLogoBrand"
+      ng-style="{ 'background': smallLogoBrand }"
+      aria-label="{{ appTitle }} Logo"
+      class="logo-small visible-sm hidden-xs"
+    ></li>
+  </div>
+
+  <!-- Links -->
+  <div class="global-nav__links">
+    <!-- Main apps -->
+    <div class="global-nav__links-section">
+      <app-switcher
+        chrome="chrome"
+      ></app-switcher>
+
+	<div class="global-nav-link " ng-class="{ active: isActive, 'is-global-nav-link-disabled': isDisabled }" tooltip="" tooltip-placement="right" tooltip-popup-delay="0" tooltip-append-to-body="1" on-click="switcher.ensureNavigation($event, link)" href="http://35.185.220.144:5601/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" icon="link.icon" title="link.title">
+  <a class="global-nav-link__anchor" href="http://35.185.220.144:5601/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" ng-click="onClick({ $event: $event })" data-test-subj="appLink" title="new">
+    <div class="global-nav-link__icon">
+      <!-- ngIf: icon --><img ng-if="icon" class="global-nav-link__icon-image" kbn-src="/plugins/kibana/assets/discover.svg" src="/plugins/kibana/assets/discover.svg"><!-- end ngIf: icon -->
+
+      <!-- ngIf: !icon -->
+    </div>
+
+    <div class="global-nav-link__title">
+      Security Pro
+    </div>
+  </a>
+</div>
+    </div>
+
+    <!-- Bottom button -->
+    <div class="global-nav__links-section">
+      <div class="chrome-actions" kbn-chrome-append-nav-controls></div>
+
+      <!-- Open/close sidebar -->
+      <global-nav-link
+        class="{{ globalNavToggleButton.classes }}"
+        tooltip-content="globalNavToggleButton.tooltipContent"
+        on-click="toggleGlobalNav($event)"
+        icon="'plugins/kibana/assets/play-circle.svg'"
+        title="globalNavToggleButton.title"
+      ></global-nav-link>
+    </div>
+  </div>
+
+</nav>

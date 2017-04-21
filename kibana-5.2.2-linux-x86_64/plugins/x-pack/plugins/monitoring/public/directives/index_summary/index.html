@@ -1,0 +1,13 @@
+<div class="monitoring-element monitoring-index-status">
+  <div class="stats">
+    <div>
+      <span class="status status-{{ getSummaryStatus()|lowercase }}">
+        <span class="{{ getStatusIconClass() }}" title="{{ getSummaryStatusText() }}"></span>
+      </span>
+    </div>
+    <div>Documents: <strong>{{ summary.documents|formatNumber:'0.[0]a' }}</strong></div>
+    <div>Data: <strong>{{ summary.dataSize|formatNumber:'0.0 b' }}</strong></div>
+    <div>Total Shards: <strong>{{ summary.totalShards|formatNumber:'0,0' }}</strong></div>
+    <div>Unassigned Shards: <strong>{{ summary.unassignedShards|formatNumber:'0,0' }}</strong></div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.monitoring-cluster-status,
+.monitoring-index-status,
+.monitoring-kibana-status,
+.monitoring-node-status {
+  background-color: #eff0f1;
+  padding: 10px 0;
+  display: flex;
+
+  * + * {
+    margin-left: 10px;
+  }
+
+  .stats {
+    display: flex;
+    >div {
+      align-self: center;
+      padding: 5px;
+    }
+  }
+
+  .stats {
+    flex-grow: 1;
+    border: 0;
+    .loading {
+      flex-grow: 1;
+    }
+    &.yellow {
+      background-color: @esYellow;
+      color: @esBlack;
+      i.fa {
+        color: @esBlack;
+      }
+    }
+    &.red{
+      background-color: @esRed;
+      color: @white;
+      i.fa {
+        color: @white;
+      }
+    }
+    .status {
+      &.green {
+        a {
+          color: @white;
+        }
+        color: @white;
+        background-color: @esGreen;
+      }
+      &.red {
+        a {
+          color: @white;
+        }
+        color: @white;
+        background-color: @esRed;
+      }
+      &.yellow{
+        a {
+          color: @esBlack;
+        }
+        color: @esBlack;
+        background-color: @esYellow;
+      }
+    }
+  }
+}
