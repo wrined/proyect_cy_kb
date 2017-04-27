@@ -9,6 +9,7 @@
  *  - console@kibana
  *  - elasticsearch@kibana
  *  - graph@5.2.2
+ *  - iframe_vis@kibana
  *  - kbn_doc_views@kibana
  *  - kbn_vislib_vis_types@kibana
  *  - kibana@kibana
