@@ -9,6 +9,7 @@
  *  - console@kibana
  *  - elasticsearch@kibana
  *  - graph@5.2.2
+ *  - iframe_vis@kibana
  *  - kbn_doc_views@kibana
  *  - kbn_vislib_vis_types@kibana
  *  - kibana@kibana
@@ -32,6 +33,7 @@
 require('ui/chrome');
 require('plugins/kibana/kibana');
 require('plugins/tilemap/vis_type_enhancers/update_tilemap_settings');
+require('plugins/iframe_vis/iframe_vis');
 require('plugins/kbn_vislib_vis_types/kbn_vislib_vis_types');
 require('plugins/markdown_vis/markdown_vis');
 require('plugins/metric_vis/metric_vis');
