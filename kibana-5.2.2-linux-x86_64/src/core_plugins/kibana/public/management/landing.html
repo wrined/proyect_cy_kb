@@ -7,7 +7,7 @@
 
     <!-- Management sections for the ES stack -->
     <div
-      ng-if="section.items.length > 0"
+      ng-show="section.items.length > 10"
       ng-repeat="section in sections"
       ng-class="{ 'management-section-info-expanded': section.showInfo }"
       class="page-row"
