@@ -36,8 +36,14 @@ module.directive('globalNav', globalNavState => {
         scope.$root.$broadcast('globalNav:update');
       }
       console.log('nav');
-      console.log(scope.appUser);
+      console.log(scope.appUser.toJSON());
+    //   console.log(angular.toJSON(scope.appUser));
+      console.log(scope.appUser.username);
+      console.log(JSON.stringify(scope.appUser));
+      scope.role_active = scope.appUser.username == 'Lallen' ? false: true;
 
+
+      console.log(scope.role_active);
       updateGlobalNav();
 
       scope.$root.$on('globalNavState:change', () => {

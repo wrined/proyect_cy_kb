@@ -45,8 +45,6 @@ export default function (chrome, internals) {
           internals.trackPossibleSubUrl(urlWithStates);
         };
         $scope.user = ShieldUser.getCurrent();
-        console.log('kbn');
-        console.log($scope.user);
         $rootScope.$on('$routeChangeSuccess', onRouteChange);
         $rootScope.$on('$routeUpdate', onRouteChange);
         onRouteChange();
