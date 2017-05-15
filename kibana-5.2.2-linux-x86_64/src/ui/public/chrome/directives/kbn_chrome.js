@@ -32,7 +32,7 @@ export default function (chrome, internals) {
       },
 
       controllerAs: 'chrome',
-      controller($scope, $rootScope, $location, $http, Private) {
+      controller($scope, $rootScope, $location, $http, Private,ShieldUser) {
         const getUnhashableStates = Private(getUnhashableStatesProvider);
 
         // are we showing the embedded version of the chrome?
@@ -44,7 +44,9 @@ export default function (chrome, internals) {
           const urlWithStates = unhashUrl(urlWithHashes, getUnhashableStates());
           internals.trackPossibleSubUrl(urlWithStates);
         };
-
+        $scope.user = ShieldUser.getCurrent();
+        console.log('kbn');
+        console.log($scope.user);
         $rootScope.$on('$routeChangeSuccess', onRouteChange);
         $rootScope.$on('$routeUpdate', onRouteChange);
         onRouteChange();

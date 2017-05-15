@@ -18,6 +18,7 @@ module.directive('globalNav', globalNavState => {
       logoBrand: '=',
       smallLogoBrand: '=',
       appTitle: '=',
+      appUser: '=',
     },
     template: globalNavTemplate,
     link: scope => {
@@ -34,6 +35,8 @@ module.directive('globalNav', globalNavState => {
         // Notify visualizations, e.g. the dashboard, that they should re-render.
         scope.$root.$broadcast('globalNav:update');
       }
+      console.log('nav');
+      console.log(scope.appUser);
 
       updateGlobalNav();
 

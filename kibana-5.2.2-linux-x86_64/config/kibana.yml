@@ -21,7 +21,7 @@
 
 # The URL of the Elasticsearch instance to use for all your queries.
 
-elasticsearch.url: "http://35.185.220.144:9200"
+elasticsearch.url: "http://35.185.239.61:9200"
 
 
 

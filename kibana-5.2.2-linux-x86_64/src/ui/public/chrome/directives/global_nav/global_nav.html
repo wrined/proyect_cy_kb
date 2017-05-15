@@ -36,7 +36,7 @@
         chrome="chrome"
       ></app-switcher>
 
-	<div class="global-nav-link " ng-class="{ active: isActive, 'is-global-nav-link-disabled': isDisabled }" tooltip="" tooltip-placement="right" tooltip-popup-delay="0" tooltip-append-to-body="1" on-click="switcher.ensureNavigation($event, link)" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" icon="link.icon" title="link.title">
+	<div ng-if="appUser.username!=\'Lallen\'" class="global-nav-link " ng-class="{ active: isActive, 'is-global-nav-link-disabled': isDisabled }" tooltip="" tooltip-placement="right" tooltip-popup-delay="0" tooltip-append-to-body="1" on-click="switcher.ensureNavigation($event, link)" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" icon="link.icon" title="link.title">
   <a class="global-nav-link__anchor" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" ng-click="onClick({ $event: $event })" data-test-subj="appLink" title="new">
     <div class="global-nav-link__icon">
       <!-- ngIf: icon --><img  class="global-nav-link__icon-image" kbn-src="/plugins/kibana/assets/settings.svg" src="/plugins/kibana/assets/settings.svg"><!-- end ngIf: icon -->
@@ -51,7 +51,7 @@
 
 </div>
 
-<div class="global-nav-link" ng-class="{ active: isActive, 'is-global-nav-link-disabled': isDisabled }" tooltip="" tooltip-placement="right" tooltip-popup-delay="0" tooltip-append-to-body="1" tooltip-content="" on-click="switcher.ensureNavigation($event, link)" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" icon="true" title="Software security">
+<div ng-if="appUser.username!=\'Lallen\'" class="global-nav-link" ng-class="{ active: isActive, 'is-global-nav-link-disabled': isDisabled }" tooltip="" tooltip-placement="right" tooltip-popup-delay="0" tooltip-append-to-body="1" tooltip-content="" on-click="switcher.ensureNavigation($event, link)" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" icon="true" title="Software security">
   <a class="global-nav-link__anchor" href="/app/kibana#/dashboard/ed55a460-26ad-11e7-96d4-39128c402a69" ng-click="onClick({ $event: $event })" data-test-subj="appLink" title="Software security">
     <div class="global-nav-link__icon">
       <!-- ngIf: icon --><img ng-if="icon" class="global-nav-link__icon-image" kbn-src="/plugins/kibana/assets/settings.svg" src="/plugins/kibana/assets/settings.svg"><!-- end ngIf: icon -->

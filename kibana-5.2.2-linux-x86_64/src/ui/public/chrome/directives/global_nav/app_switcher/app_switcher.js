@@ -51,13 +51,14 @@ uiModules
     },
     template: appSwitcherTemplate,
     controllerAs: 'switcher',
-    controller($scope, appSwitcherEnsureNavigation, globalNavState) {
+    controller($scope, appSwitcherEnsureNavigation, globalNavState,ShieldUser) {
       if (!$scope.chrome || !$scope.chrome.getNavLinks) {
         throw new TypeError('appSwitcher directive requires the "chrome" config-object');
       }
 
       this.links = $scope.chrome.getNavLinks();
-
+    //   const user = ShieldUser.getCurrent();
+      console.log(ShieldUser.getCurrent());
       // links don't cause full-navigation events in certain scenarios
       // so we force them when needed
       this.ensureNavigation = appSwitcherEnsureNavigation;
