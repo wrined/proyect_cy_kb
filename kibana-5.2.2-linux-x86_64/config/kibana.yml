@@ -5,7 +5,7 @@
 # The default is 'localhost', which usually means remote machines will not be able to connect.
 # To allow connections from remote users, set this parameter to a non-loopback address.
 
-#server.host: "10.138.0.2"
+server.host: "172.31.41.207"
 
 
 # Enables you to specify a path to mount Kibana at if you are running behind a proxy. This only affects
@@ -21,7 +21,7 @@
 
 # The URL of the Elasticsearch instance to use for all your queries.
 
-elasticsearch.url: "http://35.185.239.61:9200"
+elasticsearch.url: "http://172.31.41.207:9200"
 
 
 
